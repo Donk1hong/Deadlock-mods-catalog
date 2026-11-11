@@ -1,0 +1,32 @@
+{
+  "name": "deadlock-mods-catalog",
+  "version": "0.0.0",
+  "description": "A project for testing JavaScript knowledge: a mod catalog that utilizes the API from Valve’s game Deadlock.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "homepage": "https://github.com/Donk1hong/Deadlock-mods-catalog#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Donk1hong/Deadlock-mods-catalog"
+  },
+  "bugs": {
+    "url": "https://github.com/Donk1hong/Deadlock-mods-catalog/issues"
+  },
+  "author": {
+    "name": "Ruslan"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "globals": "^17.14.0",
+    "vite": "^8.3.6"
+  }
+}
