@@ -1,18 +1,22 @@
 import { CatalogView } from './views/CatalogView.js';
 import { FavoritesView } from './views/FavoritesView.js';
+import { Header } from './components/Header.js';
 
 export class App {
   constructor(app) {
     this.app = app;
-    this.currentView;
-
+    this.currentView = null;
+    this.header = new Header();
+    this.content = document.createElement('main');
+    this.app.appendChild(this.header.render());
+    this.app.appendChild(this.content);
     window.addEventListener('hashchange', () => {
       this.navigate();
     });
   }
 
   render() {
-    this.app.innerHTML = this.currentView.render();
+    this.content.innerHTML = this.currentView.render();
   }
 
   getRoute() {
@@ -20,7 +24,7 @@ export class App {
   }
 
   navigate() {
-    if (this.currentView === null) {
+    if (this.currentView !== null) {
       this.currentView.destroy();
     }
 
