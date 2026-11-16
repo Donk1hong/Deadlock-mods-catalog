@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  width: 100%;
+  min-height: 72px;
+  padding: 0 max(28px, calc((100vw - 1280px) / 2));
+  background: #111110;
+  border-bottom: 1px solid #272725;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.header-brand h1 {
+  margin: 0;
+
+  color: #f2f0eb;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.header-pages {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-switch {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #969491;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  gap: 11px;
+  transition: color 0.18s ease;
+}
+
+.header-switch:hover {
+  color: #eee2c7;
+}
+
+.header-switch[aria-current="page"] {
+  color: #f2f0eb;
+}
+
+.header-switch:focus-visible {
+  outline: 2px solid #e8d5ad;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-favorites {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid #39352e;
+  border-radius: 8px;
+  background: #1c1b19;
+  color: #e9e5dd;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.header-favorites span {
+  color: #e8d5ad;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.header-favorites:hover {
+  background: #28251f;
+  border-color: #6b5940;
+}
+
+.header-favorites:focus-visible {
+  outline: 2px solid #e8d5ad;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .header-brand h1 {
+    font-size: 21px;
+  }
+
+  .header-pages {
+    width: 100%;
+    gap: 26px;
+  }
+
+  .header-switch {
+    min-height: 36px;
+    font-size: 13px;
+  }
+
+  .header-pages {
+    order: 3;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-switch {
+    transition: none;
+  }
+}
