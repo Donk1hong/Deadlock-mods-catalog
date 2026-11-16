@@ -13,17 +13,10 @@ export class Header {
           </a>
         </div>
         <nav class="header-pages">
-          <a class="header-switch" href="#/catalog">Моды</a>
           <a class="header-switch" href="#/heroes">Герои</a>
+          <a class="header-switch" href="#/catalog">Моды</a>
           <a class="header-switch" href="#/builds">Билды</a>
         </nav>
-
-        <div class="header-actions">
-          <a class="header-favorites" href="#/favorites">
-            <span aria-hidden="true">♡</span>
-              Избранное
-          </a>
-        </div>
       `;
 
     return header;

@@ -1,5 +1,4 @@
 import { CatalogView } from './views/Catalog/CatalogView.js';
-import { FavoritesView } from './views/Favorites/FavoritesView.js';
 import { BuildsView } from './views/Builds/BuildsView.js';
 import { HeroesView } from './views/Heroes/HeroesView.js';
 import { Header } from './components/Header/Header.js';
@@ -30,9 +29,7 @@ export class App {
       this.currentView.destroy();
     }
 
-    if (this.getRoute() === '#/favorites') {
-      this.currentView = new FavoritesView();
-    } else if (this.getRoute() === '#/heroes') {
+    if (this.getRoute() === '#/heroes') {
       this.currentView = new HeroesView();
     } else if (this.getRoute() === '#/builds') {
       this.currentView = new BuildsView();
