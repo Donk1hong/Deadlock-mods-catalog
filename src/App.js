@@ -18,6 +18,7 @@ export class App {
 
   render() {
     this.content.innerHTML = this.currentView.render();
+    this.currentView.afterRender();
   }
 
   getRoute() {
